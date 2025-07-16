@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.header_content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 0.6rem;
+}
+
+.logo_icon {
+    height: 2.2rem;
+    width: 2rem;
+}
+
+.logo_text {
+    font-size: 2rem;
+    color: #5254f8;
+}
+
+.nav {
+    display: none;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width:768px) {
+    .nav {
+        display: flex;
+    }
+}
+
+.nav_link {
+    font-size: 1.125rem;
+    color: #718096;
+    font-weight: 600;
+    transition: color 0.1s;
+}
+
+.nav_link:hover {
+    color: #5254f8;
+}
+
+.contact_button {
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: #5254f8;
+    color: white;
+    transition: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+@media screen and (min-width:768px) {
+    .contact_button {
+        display: block;
+    }
+}
+
+.contact_button:hover {
+    background-color: #3336eb;
+}
+
+.hamburger_button {
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+@media screen and (max-width:768px) {
+    .hamburger_button{
+        display: block;
+    }
+}
+
+.hamburger_icon {
+    height: 1.75rem;
+    width: 1.75rem;
+}
