@@ -94,7 +94,7 @@ body {
 }
 
 @media screen and (max-width:768px) {
-    .hamburger_button{
+    .hamburger_button {
         display: block;
     }
 }
@@ -102,4 +102,128 @@ body {
 .hamburger_icon {
     height: 1.75rem;
     width: 1.75rem;
+}
+
+.main_section {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem;
+    gap: 2rem;
+    margin: 50px;
+    align-items: center;
+}
+
+.content_left {
+    text-align: center;
+    animation: slidefromleft 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slidefromleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section_label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #5254f8;
+}
+
+.section_title {
+    font-size: 2.3rem;
+    padding: 1rem;
+}
+
+.section_desc {
+    color: rgb(105, 98, 98);
+    font-size: 1.13rem;
+}
+
+.button_group {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.start_button,
+.tour_button {
+    border: none;
+    border-radius: 0.375rem;
+    background-color: #5254f8;
+    color: white;
+    transition: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.start_button:hover {
+    background-color: #3336eb;
+}
+
+.tour_button:hover {
+    background-color: rgb(85, 84, 84);
+}
+
+.tour_button {
+    background-color: rgb(124, 122, 122);
+}
+
+.content_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_container {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 65vh;
+    width: 315px;
+}
+
+.section_image {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width:768px){
+    .main_section{
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 5rem;
+    }
+    .content_left{
+        max-width: 50%;
+        text-align: left;
+    }
+    .section_title{
+        padding-left: 0;
+        font-size: 2.25rem;
+    }
+    .button_group{
+       justify-content: start; 
+       padding-left: 0;
+    }
+    .image_container{
+        height: 72vh;
+    }
 }
